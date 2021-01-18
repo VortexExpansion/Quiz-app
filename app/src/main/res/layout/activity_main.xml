@@ -13,7 +13,7 @@
 
     <com.yuyakaido.android.cardstackview.CardStackView
         android:id="@+id/myCardStackView"
-        android:layout_width="350dp"
+        android:layout_width="380dp"
         android:layout_height="650dp"
          />
 

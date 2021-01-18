@@ -38,7 +38,15 @@ public class MainActivity extends AppCompatActivity {
         testFilms.add("The pledge that ought to be taken");
         testFilms.add("Basketball Diaries that are affected by this measure");
 
+        ArrayList<String> CategoryFilms = new ArrayList<>();
+        CategoryFilms.add("Sports");
+        CategoryFilms.add("Science");
+        CategoryFilms.add("General");
+        CategoryFilms.add("Biztech");
+        CategoryFilms.add("MELA");
+
         mCardStackView.setAdapter(new CardStackAdapter(this,testFilms)); //initially red becuase you don't have an adapter yet
+        //mCardStackView.setAdapter(new CardStackAdapter(this,CategoryFilms));
 
         url = "https://opentdb.com/api.php?amount=10&type=boolean";
         mRequestQueue = VolleySingleton.getInstance().getRequestQueue(); //first volley statement for inside

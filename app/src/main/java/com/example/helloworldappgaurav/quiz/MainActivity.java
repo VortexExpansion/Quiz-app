@@ -32,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
         mCardStackView.setLayoutManager(new CardStackLayoutManager(this)); //from github setup
 
         ArrayList<String> testFilms = new ArrayList<>();
-        testFilms.add("Matrix");
-        testFilms.add("On Golden Pond");
-        testFilms.add("At CLose Range");
-        testFilms.add("The pledge");
-        testFilms.add("Basketball Diaries");
+        testFilms.add("Matrix the question for the day is basically checking the indentation");
+        testFilms.add("On Golden Pond just like the Golden circle of Kingsman");
+        testFilms.add("At CLose Range is a measure of the amount of substance");
+        testFilms.add("The pledge that ought to be taken");
+        testFilms.add("Basketball Diaries that are affected by this measure");
 
         mCardStackView.setAdapter(new CardStackAdapter(this,testFilms)); //initially red becuase you don't have an adapter yet
 

@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:layout_marginTop="10dp"
+    android:background="#fbe8d3"
     >
 
     <com.yuyakaido.android.cardstackview.CardStackView

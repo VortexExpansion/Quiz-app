@@ -5,11 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="10dp"
+    >
 
     <com.yuyakaido.android.cardstackview.CardStackView
         android:id="@+id/myCardStackView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_width="350dp"
+        android:layout_height="650dp"
+         />
 
 </LinearLayout>

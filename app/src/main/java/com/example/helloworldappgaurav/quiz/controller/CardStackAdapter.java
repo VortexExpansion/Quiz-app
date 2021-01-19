@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.helloworldappgaurav.quiz.R;
+import com.example.helloworldappgaurav.quiz.model.QuizManager;
+import com.example.helloworldappgaurav.quiz.model.QuizQuestion;
 import com.example.helloworldappgaurav.quiz.view.FilmViewHolder;
 
 import java.util.List;
@@ -17,12 +19,12 @@ import java.util.List;
 public class CardStackAdapter extends RecyclerView.Adapter<FilmViewHolder> {
 
     private Context mContext;
-    private List<String> mfilmNames;
+    private List<QuizQuestion> mFilmQuestions;
     private LayoutInflater mLayoutInflater;
     
-    public CardStackAdapter(Context context, List<String> filmNames){
+    public CardStackAdapter(Context context, List<QuizQuestion> filmQuestions){
         mContext = context;
-        mfilmNames = filmNames;
+        mFilmQuestions = filmQuestions;
         mLayoutInflater = LayoutInflater.from(context);
     }
 
@@ -38,23 +40,37 @@ public class CardStackAdapter extends RecyclerView.Adapter<FilmViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull FilmViewHolder holder, int position) {
 
-        holder.getTxtFilmQuestion().setText(mfilmNames.get(position));
+        holder.getTxtFilmQuestion().setText(mFilmQuestions.get(position).getQuestionText());
         holder.getImgButtonTrue().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext, "True is tapped", Toast.LENGTH_SHORT).show();
+
+                if (mFilmQuestions.get(position).isTrueAnswer()){
+                    Toast.makeText(mContext, "Correct Answer ! Congratz !", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(mContext, "Sorry, incorrect answer", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         holder.getImgButtonFalse().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext, "False is tapped", Toast.LENGTH_SHORT).show();
+
+                if (mFilmQuestions.get(position).isTrueAnswer()){
+                    Toast.makeText(mContext, "Sorry, incorrect answer", Toast.LENGTH_SHORT).show();
+                }
+                else{
+
+                    Toast.makeText(mContext, "Correct Answer ! Congratz !", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return mfilmNames.size();
+        return mFilmQuestions.size();
     }
 }

@@ -7,14 +7,13 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:layout_marginTop="10dp"
     android:background="#fbe8d3"
     >
 
     <com.yuyakaido.android.cardstackview.CardStackView
         android:id="@+id/myCardStackView"
-        android:layout_width="380dp"
-        android:layout_height="650dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
          />
 
 </LinearLayout>

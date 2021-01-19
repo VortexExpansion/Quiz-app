@@ -41,6 +41,7 @@ public class CardStackAdapter extends RecyclerView.Adapter<FilmViewHolder> {
     public void onBindViewHolder(@NonNull FilmViewHolder holder, int position) {
 
         holder.getTxtFilmQuestion().setText(mFilmQuestions.get(position).getQuestionText());
+        holder.getTxtFilmCategory().setText(mFilmQuestions.get(position).getQuestionCategory());
         holder.getImgButtonTrue().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

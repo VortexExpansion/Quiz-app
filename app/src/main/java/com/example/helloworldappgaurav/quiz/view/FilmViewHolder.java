@@ -23,6 +23,7 @@ public class FilmViewHolder extends RecyclerView.ViewHolder{
         txtFilmQuestion = itemView.findViewById(R.id.film_question_text);
         imgButtonTrue = itemView.findViewById(R.id.trueButton);
         imgButtonFalse = itemView.findViewById(R.id.falseButton);
+        txtFilmCategory = itemView.findViewById(R.id.film_category);
     }
 
     public TextView getTxtFilmQuestion() {
@@ -35,6 +36,10 @@ public class FilmViewHolder extends RecyclerView.ViewHolder{
 
     public ImageButton getImgButtonFalse() {
         return imgButtonFalse;
+    }
+
+    public TextView getTxtFilmCategory() {
+        return txtFilmCategory;
     }
 
 

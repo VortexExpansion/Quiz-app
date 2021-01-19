@@ -47,7 +47,12 @@ public class MainActivity extends AppCompatActivity {
 //        CategoryFilms.add("Science");
 //        CategoryFilms.add("General");
 //        CategoryFilms.add("Biztech");
-//        CategoryFilms.add("MELA");
+//        CategoryFilms.add("Sports");
+//        CategoryFilms.add("Science");
+//        CategoryFilms.add("General");
+//        CategoryFilms.add("Biztech");
+//        CategoryFilms.add("General");
+//        CategoryFilms.add("Biztech");
 
 
 

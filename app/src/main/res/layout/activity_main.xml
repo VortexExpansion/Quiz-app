@@ -10,6 +10,7 @@
     android:background="#fbe8d3"
     >
 
+
     <com.yuyakaido.android.cardstackview.CardStackView
         android:id="@+id/myCardStackView"
         android:layout_width="match_parent"
